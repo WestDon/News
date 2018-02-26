@@ -1,3 +1,3 @@
 # News
-Author - Andrei Vaschuk
-About - News Portal
+#### Author - Andrei Vaschuk
+#### About - News Portal
