@@ -1,0 +1,37 @@
+{
+    "name": "fluxapp",
+    "description": "app with flux",
+    "version": "1.0.0",
+    "author": "",
+    "scripts": {
+        "start": "webpack-dev-server --hot --open",
+        "build": "webpack"
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "immutability-helper": "^2.6.4",
+        "immutable": "^3.8.2",
+        "react": "^16.0.0",
+        "react-bootstrap": "^0.32.1",
+        "react-dom": "^16.0.0",
+        "react-redux": "^5.0.6",
+        "react-router-dom": "^4.2.2",
+        "redux": "^3.7.2"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-latest": "^6.24.1",
+        "babel-preset-react": "^6.16.0",
+        "css-loader": "^0.28.9",
+        "extract-text-webpack-plugin": "^3.0.2",
+        "file-loader": "^1.1.11",
+        "style-loader": "^0.20.1",
+        "webpack": "^3.11.0",
+        "webpack-dev-server": "^2.11.1"
+    }
+}
