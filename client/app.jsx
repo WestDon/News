@@ -5,6 +5,7 @@ var Provider = require("react-redux").Provider;
 var reducer = require("./reducers/appReducer.jsx");
 var AppView = require("./views/appview.jsx");
 import './styles/main.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
  
 var store = redux.createStore(reducer);
  

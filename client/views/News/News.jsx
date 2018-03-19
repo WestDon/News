@@ -9,7 +9,6 @@ export default class News extends React.Component {
     }
 
     render() { 
-        debugger;
         return (<div>
         {this.props.news.map((article, i)=>{
             return <div className='news-container' key={i}>

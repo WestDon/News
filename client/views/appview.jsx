@@ -109,19 +109,20 @@ class AppView extends React.Component {
     // axios.get('https://newsapi.org/v1/articles?source=bbc-sport&sortBy=top&apiKey=6f7c85381a5c44deb7e024cd02c60e31')
     //   .then((res) => {
     //     debugger;
-        this.setState({ articles: data.articles });
-     // });
+    this.setState({ articles: data.articles });
+    // });
   }
 
   render() {
     return <div>
 
-      < div className="header" >
-        <strong className="logo">
-          <a href="#">News Portal</a>
-        </strong>
-        <div className="search"></div>
-      </div >
+<nav className="navbar navbar-light bg-light justify-content-between">
+  <a className="navbar-brand">News Portal</a>
+  <form className="form-inline">
+    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
 
       <div className="welcome">
         <div>
@@ -130,9 +131,22 @@ class AppView extends React.Component {
         </div>
       </div>
       <div>
-        <News news={data.articles}/>
+        <News news={data.articles} />
       </div>
       <Banner time={1} />
+      <div className="container">
+        <div className="row">
+          <div className="col-sm">
+            One of three columns
+    </div>
+          <div className="col-sm">
+            One of three columns
+    </div>
+          <div className="col-sm">
+            One of three columns
+    </div>
+        </div>
+      </div>
     </div >
   }
 };

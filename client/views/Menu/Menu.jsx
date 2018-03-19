@@ -17,14 +17,14 @@ export default class Menu extends React.Component {
     }
 
     render() {
-        return <ul className="nav">
-            <li><a href="#">home</a></li>
-            <li><a href="#">about us</a></li>
+        return <ul className="nav-bar-my">
+            <li><div>home</div></li>
+            <li><div>about us</div></li>
             <li onClick={(e) => { this.openMenu(e) }} className="sub-menu">
-                <a href="#">sub</a>
-            <SubMenu showMenu={this.state.showMenu} />
+                <div>sub</div>
+                <SubMenu showMenu={this.state.showMenu} />
             </li>
-            <li><a href="#">contact</a></li>
+            <li><div>contact</div></li>
         </ul>
     }
 };
@@ -56,11 +56,11 @@ class SubMenu extends React.Component {
 
     render() {
         return this.props.showMenu ? <ul className="sub-drop">
-            <li onClick={(e) => this.showMenu(e)}><a href="#">inne11r</a>
+            <li onClick={(e) => this.showMenu(e)}>inne11r
                 <SubMenu showMenu={this.state.show} close={() => { }} />
             </li>
-            <li><a href="#">inner</a></li>
-            <li><a href="#">inner</a></li>
+            <li>inner</li>
+            <li>inner</li>
         </ul>
             : null
     }

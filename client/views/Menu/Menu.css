@@ -3,31 +3,43 @@
     padding: 40px;
   }
   
-  .nav {
+  .nav-bar-my {
     float: right;
+    list-style-type: none;
+    margin-right: 10px;
   }
   
-  .nav li {
-    display: inline-block;
+  .nav-bar-my li {
     vertical-align: top;
-    color: orange;
+    color: #28a745;
     position: relative;
-  }
+    padding: 5px 15px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 
-  .nav li a {
+  }
+  .nav-bar-my li:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+/* 
+  .nav-bar-my li a {
     display: block;
     padding: 2px 10px;
-    color: orange;
-  }
+    color: #28a745;
+  } */
   
 
   .sub-drop {
     transition: all 0.3s ease;
-    background-color: gray;
+    background-color: lightgray;
     position: absolute;
-    left: -75px;
+    left: -84px;
+    border-radius: .25rem;
     top: 0;
-    padding-left: 10px;
+    padding-left: 0px;
   }
   
   .sub-drop li {
@@ -39,17 +51,12 @@
     opacity: 1;
   }
   
-  .search {
-    position: absolute;
-    right: 30px;
-    top: 20px;
-  }
 
   .show {
     transition: all 0.3s ease;
     top: 100%;
     background-color: gray;
     position: absolute;
-    left: -90px;
+    left: -85px;
     top: 0px;
   }
