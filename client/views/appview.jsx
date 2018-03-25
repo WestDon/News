@@ -8,6 +8,8 @@ import News from './News/News';
 import Menu from './Menu/Menu';
 import axios from 'axios';
 
+// import { addArticle } from '../actions';
+
 var data = {
   "status": "ok",
   "source": "bbc-sport",
@@ -113,16 +115,20 @@ class AppView extends React.Component {
     // });
   }
 
+  addToCart() {
+
+  }
+
   render() {
     return <div>
 
-<nav className="navbar navbar-light bg-light justify-content-between">
-  <a className="navbar-brand">News Portal</a>
-  <form className="form-inline">
-    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>
+      <nav className="navbar navbar-light bg-light justify-content-between">
+        <a className="navbar-brand">News Portal</a>
+        <form className="form-inline">
+          <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </nav>
 
       <div className="welcome">
         <div>
@@ -131,29 +137,16 @@ class AppView extends React.Component {
         </div>
       </div>
       <div>
-        <News news={data.articles} />
+        <News news={data.articles} addToCart={this.props.addArticle} />
       </div>
       <Banner time={1} />
-      <div className="container">
-        <div className="row">
-          <div className="col-sm">
-            One of three columns
-    </div>
-          <div className="col-sm">
-            One of three columns
-    </div>
-          <div className="col-sm">
-            One of three columns
-    </div>
-        </div>
-      </div>
     </div >
   }
 };
 
 function mapStateToProps(state) {
   return {
-    test: state.test,
+    articles: state.articles,
   };
 }
 

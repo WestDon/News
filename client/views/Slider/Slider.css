@@ -1,9 +1,8 @@
 .slider {
-    width: 800px;
     min-height: 300px;
     width: 600px;
     height: 200px;
-    float: left;
+    margin: auto;
   }
 
 .slider-body {
@@ -63,4 +62,8 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
+    cursor: pointer;
+   }
+   .bottom-slider li.active{
+    background: #28a745!important;
    }

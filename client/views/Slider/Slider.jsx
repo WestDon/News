@@ -6,9 +6,9 @@ const pathToSlides = require.context('./', true);
 // true here is for use subdirectories, you can also specify regex as third param
 
 const slides = [
-    './1.jpg',
-    './2.jpg',
-    './3.jpg',
+    pathToSlides('./1.jpg', true),
+    pathToSlides('./2.jpg', true),
+    pathToSlides('./3.jpg', true),
 ];
 
 export default class Slider extends React.Component {
@@ -17,27 +17,35 @@ export default class Slider extends React.Component {
         super(props);
 
         this.state = {
-            index: 1,
-            img: pathToSlides(slides[1], true),
+            img: slides[1],
+            slides: slides,
         };
 
     }
 
     next() {
-        const { index, img } = this.state;
+        const { img } = this.state;
         let len = slides.length;
+        let index = slides.indexOf(img);
         let nextIndex = index === (len - 1) ? 0 : (index + 1);
-        this.setState({ index: nextIndex, img: pathToSlides(slides[nextIndex], true) });
+        this.setState({ img: slides[nextIndex] });
     }
 
     prev() {
-        const { index, img } = this.state;
+        const { img } = this.state;
         let len = slides.length;
+        let index = slides.indexOf(img);
         let prevIndex = index === 0 ? len - 1 : (index - 1);
-        this.setState({ index: prevIndex, img: pathToSlides(slides[prevIndex], true) });
+        this.setState({ img: slides[prevIndex] });
+    }
+
+    goTo(index) {
+        this.setState({ img: slides[index] });
     }
 
     render() {
+
+
         return <div className="slider">
             <div className="slider-wrapper">
                 <div className="slider-body">
@@ -47,9 +55,14 @@ export default class Slider extends React.Component {
                 </div>
                 <div className="bottom-slider">
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        {
+                            this.state.slides.map((slide, index) => {
+                                let img = slides[index];
+                                let className = this.state.img===img ? "active": "";
+
+                                return <li key={index} className = {className} onClick={()=> this.goTo(index)}></li>
+                            })
+                        }
                     </ul>
                 </div>
             </div>

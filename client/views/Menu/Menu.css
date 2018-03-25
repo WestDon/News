@@ -4,9 +4,15 @@
   }
   
   .nav-bar-my {
-    float: right;
     list-style-type: none;
     margin-right: 10px;
+    position: absolute;
+    background: #f8f9fa;
+    border-radius: .25rem;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 20px;
   }
   
   .nav-bar-my li {

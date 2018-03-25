@@ -1,9 +1,9 @@
 
-  var addTest = function (test) {
+  var addArticle = function (article) {
     return {
-      type: "TEST",
-      test
+      type: "ADD_ARTICLE",
+      article
     }
   };
    
-  module.exports = {addTest};
+  module.exports = {addArticle};

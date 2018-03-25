@@ -1,7 +1,6 @@
 var React = require("react");
+import { Route } from 'react-router-dom'
 import './Menu.css';
-
-const menuemail = 0;
 
 export default class Menu extends React.Component {
     constructor(props) {
@@ -24,7 +23,11 @@ export default class Menu extends React.Component {
                 <div>sub</div>
                 <SubMenu showMenu={this.state.showMenu} />
             </li>
-            <li><div>contact</div></li>
+            <Route render={({ history }) => (
+            <li>
+                <div onClick={() => { history.push('/News') }}>News</div>
+            </li>
+            )} />
         </ul>
     }
 };

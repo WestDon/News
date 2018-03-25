@@ -1,9 +1,39 @@
 .news-container{
     width: 300px;
-    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    background: lightgray;
 }
 
-.news-container > img{
-    height: 100px;
-    width: 250px; 
+.news{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.title{
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 70px;
+}
+.image{
+    height: 150px;
+    width: 250px;
+    display: block;
+    margin: auto; 
+}
+.url{
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+}
+
+.description{
+    padding-bottom: 25px;
+}
+
+.add-article{
+    float: right;
 }
