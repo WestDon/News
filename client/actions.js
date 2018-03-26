@@ -5,5 +5,12 @@
       article
     }
   };
+
+  var removeArticle = function (article) {
+    return {
+      type: "REMOVE_ARTICLE",
+      article
+    }
+  };
    
-  module.exports = {addArticle};
+  module.exports = {addArticle, removeArticle};

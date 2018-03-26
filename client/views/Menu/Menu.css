@@ -13,6 +13,7 @@
     padding: 0;
     right: 0;
     top: 20px;
+    z-index: 99999;
   }
   
   .nav-bar-my li {

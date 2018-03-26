@@ -8,6 +8,7 @@ export default class News extends React.Component {
         };
     }
 
+
     render() {
         return (<div className='news'>
             {this.props.news.map((article, i) => {
@@ -23,9 +24,7 @@ export default class News extends React.Component {
                     </div>
                     <div className="url">
 
-                        <div className="add-article" onClick={() => this.props.addToCart(article)}>
-                            Add
-                        </div>
+                        {this.props.actionNews(article)}
 
                         <a href={article.url}>{article.author}</a>
                     </div>

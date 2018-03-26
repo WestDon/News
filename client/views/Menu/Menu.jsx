@@ -17,7 +17,11 @@ export default class Menu extends React.Component {
 
     render() {
         return <ul className="nav-bar-my">
-            <li><div>home</div></li>
+           <Route render={({ history }) => (
+            <li>
+                <div onClick={() => { history.push('/Home') }}>Home</div>
+            </li>
+            )} />
             <li><div>about us</div></li>
             <li onClick={(e) => { this.openMenu(e) }} className="sub-menu">
                 <div>sub</div>

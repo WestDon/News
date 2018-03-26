@@ -36,4 +36,16 @@
 
 .add-article{
     float: right;
+    width: 20px;
+    height: 20px;
+    background: greenyellow;
+    cursor: pointer;
+}
+
+.remove-article{
+    float: right;
+    width: 20px;
+    height: 20px;
+    background: red;
+    cursor: pointer;
 }
