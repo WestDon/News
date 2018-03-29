@@ -6,9 +6,9 @@ const pathToSlides = require.context('./', true);
 // true here is for use subdirectories, you can also specify regex as third param
 
 const slides = [
-    pathToSlides('./1.jpg', true),
-    pathToSlides('./2.jpg', true),
-    pathToSlides('./3.jpg', true),
+    pathToSlides('./News/1.jpg', true),
+    pathToSlides('./News/2.jpg', true),
+    pathToSlides('./News/3.jpg', true),
 ];
 
 export default class Slider extends React.Component {
