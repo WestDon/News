@@ -5,11 +5,13 @@
     "author": "",
     "scripts": {
         "start": "webpack-dev-server --hot --open",
-        "build": "webpack"
+        "build": "webpack",
+        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "axios": "^0.18.0",
         "bootstrap": "^4.0.0",
+        "gh-pages": "^1.1.0",
         "immutability-helper": "^2.6.4",
         "immutable": "^3.8.2",
         "react": "^16.0.0",
