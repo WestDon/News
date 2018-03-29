@@ -10,8 +10,10 @@ export default class NewsAdd extends React.Component {
             </div>);
     };
     render() {
+
         return (
             <News actionNews={(article) => this.getType(article)} {...this.props} />
         );
     }
 }
+

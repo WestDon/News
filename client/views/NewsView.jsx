@@ -5,9 +5,11 @@ var actions = require("../actions");
 import Banner from './Banner/Banner';
 import Slider from './Slider/Slider';
 import NewsRemove from './News/NewsRemove';
+import NewsSerach from './News/NewsSearch';
 import Menu from './Menu/Menu';
 import axios from 'axios';
 import DefaultLayout from './Layout/Default';
+
 
 class NewsView extends React.Component {
 
@@ -16,15 +18,21 @@ class NewsView extends React.Component {
         
         this.state = {
             articles: [],
+            searchText: "",
         }
     }
 
  
 
-    render() {
+    render() { 
+        const NewsWithSearch = NewsSerach(
+            NewsRemove,
+            this.state.searchText
+          );
+
         return (
-            <DefaultLayout>
-                <NewsRemove news={this.props.articles} removeFromCart={this.props.removeArticle}/>
+            <DefaultLayout handleSearch={(e) => this.setState({ searchText: e.target.value })}>
+                <NewsWithSearch news={this.props.articles} removeFromCart={this.props.removeArticle}/>
             </DefaultLayout>
         );               
     }
