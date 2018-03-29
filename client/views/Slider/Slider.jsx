@@ -6,7 +6,7 @@ const pathToSlides = require.context('./', true);
 // true here is for use subdirectories, you can also specify regex as third param
 
 const slides = [
-    pathToSlides('./News/1.jpg', true),
+    pathToSlides('./News/1.jpg'),
     pathToSlides('./News/2.jpg', true),
     pathToSlides('./News/3.jpg', true),
 ];

@@ -3,7 +3,7 @@
     "description": "app with flux",
     "version": "1.0.0",
     "author": "",
-    "homepage": "./",
+    "homepage": ".",
     "scripts": {
         "start": "webpack-dev-server --hot --open",
         "build": "webpack",
