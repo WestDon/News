@@ -5,7 +5,7 @@ var Provider = require("react-redux").Provider;
 var reducer = require("./reducers/appReducer.jsx");
 var NewsView = require("./views/NewsView");
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import './styles/main.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Home from './views/Home/Home';
