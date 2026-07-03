@@ -32,6 +32,11 @@ export default class Menu extends React.Component {
                 <div onClick={() => { history.push('/News') }}>News</div>
             </li>
             )} />
+            <Route render={({ history }) => (
+            <li>
+                <div onClick={() => { history.push('/SportNews') }}>Sport News</div>
+            </li>
+            )} />
         </ul>
     }
 };
