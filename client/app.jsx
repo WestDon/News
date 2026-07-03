@@ -9,6 +9,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import './styles/main.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Home from './views/Home/Home';
+import SportNews from './views/SportNews/SportNews';
 
 var store = redux.createStore(reducer);
 
@@ -20,6 +21,7 @@ ReactDOM.render(
         <Route exact path="/" component={Home} />
         <Route exact path="/Home" component={Home} />
         <Route exact path="/News" component={NewsView} />
+        <Route exact path="/SportNews" component={SportNews} />
       </Switch>
     </Provider>
   </Router>,
